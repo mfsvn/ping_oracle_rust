@@ -2,9 +2,10 @@ use std::time::SystemTime;
 use oracle::Connection;
 
 fn main() {
+
     let from = SystemTime::now();
     println!("Hello, world!");
-    let conn_ora = Connection::connect("tgda", "tgda", "localhost:1523/orcl.dbthegioidienanh1").unwrap();
+    let conn_ora = Connection::connect("tgda", "tgda", "192.168.100.77:1523/orcl.dbthegioidienanh1").unwrap();
 
     let sql = "select sysdate from dual";
     println!("---------------|---------------|---------------|");
